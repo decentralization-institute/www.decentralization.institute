@@ -11,7 +11,7 @@ export const requireEnv = (value: string | undefined, identifier: string) => {
 };
 
 export const NODE_ENV = process.env.NODE_ENV ?? "development";
-export const GOOGLE_ANALYTICS_KEY = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_KEY ?? "";
-export const PLASMIC_PROJECT_ID = process.env.PLASMIC_PROJECT_ID ?? "MISSING";
-export const PLASMIC_PROJECT_API_TOKEN =
-  process.env.PLASMIC_PROJECT_API_TOKEN ?? "MISSING";
+// Google Analytics measurement ID, inlined at build time. When unset, the
+// analytics tag is left out of the page entirely.
+export const GOOGLE_ANALYTICS_KEY =
+  process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_KEY ?? "";

@@ -1,0 +1,55 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: var(--color-black);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 3.33em 15px 1.11em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+  max-width: 1140px;
+}
+
+.copyright {
+  width: 100%;
+  max-width: 800px;
+  font-family: var(--font-serif);
+  color: var(--color-white);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px;
+}
+
+.textLink,
+.iconLink {
+  display: flex;
+  padding: 8px;
+  color: var(--color-white);
+}
+
+.textLink {
+  justify-content: center;
+  align-items: center;
+}
+
+.iconLink svg {
+  width: 16px;
+  height: 16px;
+}

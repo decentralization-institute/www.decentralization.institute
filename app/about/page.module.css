@@ -1,0 +1,42 @@
+.why {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: var(--color-light-gray);
+}
+
+.whyContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 4.17em 15px 3.33em;
+}
+
+.heading {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 0.25em;
+  font-family: var(--font-serif);
+  text-align: center;
+}
+
+.intro {
+  width: 100%;
+  max-width: 784px;
+  margin-bottom: 45px;
+  font-family: var(--font-serif);
+  text-align: center;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 767px) {
+  .why {
+    background: var(--color-white);
+  }
+
+  .heading {
+    font-size: 32px;
+  }
+}

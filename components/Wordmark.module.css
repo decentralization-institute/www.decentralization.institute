@@ -1,0 +1,16 @@
+.link {
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  font-family: var(--font-brand);
+  font-size: 24px;
+  line-height: 1.5;
+  color: var(--color-black);
+  white-space: pre;
+}
+
+.inverted {
+  color: var(--color-white);
+}

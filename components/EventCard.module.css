@@ -1,0 +1,119 @@
+.cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.card {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  padding: 8px;
+}
+
+.media,
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+/*
+ * The spacer gives the frame the image's aspect ratio as a minimum height;
+ * the frame still stretches when the text column is taller, and the image
+ * covers whatever size the frame ends up.
+ */
+.imageFrame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.spacer {
+  display: block;
+  width: 100%;
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.body {
+  padding: 20px;
+  background: var(--color-white);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding: 8px;
+}
+
+.title {
+  width: 100%;
+  max-width: 262px;
+  margin: 0 0 0.5em;
+  font-family: var(--font-serif);
+}
+
+.excerpt {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 0 1em;
+  font-family: var(--font-serif);
+}
+
+.compact {
+  padding-top: 0;
+}
+
+.compact .title {
+  width: auto;
+  max-width: none;
+}
+
+.compact .excerpt {
+  width: auto;
+}
+
+.mobileOnly {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .card {
+    flex-wrap: wrap;
+  }
+
+  .media,
+  .body {
+    width: 100%;
+  }
+
+  .title,
+  .compact .title {
+    width: 100%;
+    max-width: 800px;
+    font-size: 20px;
+  }
+
+  .desktopOnly {
+    display: none;
+  }
+
+  .mobileOnly {
+    display: inline;
+  }
+}
