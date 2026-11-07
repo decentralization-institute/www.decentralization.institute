@@ -12,9 +12,10 @@ pnpm build      # static export to ./out
 pnpm start      # build, then serve ./out
 ```
 
-No environment variables or external services are needed to build. The Google
-Analytics measurement ID defaults to the one in `lib/config.ts` and can be
-overridden with `NEXT_PUBLIC_GOOGLE_ANALYTICS_KEY` (see `.env.local.example`).
+No external services are needed to build. Google Analytics is enabled by
+setting `NEXT_PUBLIC_GOOGLE_ANALYTICS_KEY` at build time (see
+`.env.local.example`); in production this is set in the Cloudflare Pages build
+environment. Without it the analytics tag is omitted.
 
 ## Layout
 

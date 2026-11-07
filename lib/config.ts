@@ -11,7 +11,7 @@ export const requireEnv = (value: string | undefined, identifier: string) => {
 };
 
 export const NODE_ENV = process.env.NODE_ENV ?? "development";
-// GA4 measurement IDs are public (they ship in the page HTML), so a default is
-// committed here. Override at build time with NEXT_PUBLIC_GOOGLE_ANALYTICS_KEY.
+// Google Analytics measurement ID, inlined at build time. When unset, the
+// analytics tag is left out of the page entirely.
 export const GOOGLE_ANALYTICS_KEY =
-  process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_KEY || "G-HSG45SWB94";
+  process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_KEY ?? "";
