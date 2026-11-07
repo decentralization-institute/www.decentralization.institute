@@ -1,0 +1,100 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: var(--color-sand);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1380px;
+  padding: 64px 32px 58px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 12px;
+  width: 100%;
+  padding: 8px;
+}
+
+.column {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+/* The title card floats over the illustration column on desktop. */
+.card {
+  position: absolute;
+  top: 98px;
+  left: 187px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+  padding: 30px;
+  background: var(--color-overlay);
+  border-left: 8px solid var(--color-sand);
+}
+
+.title {
+  font-family: var(--font-serif);
+}
+
+.description {
+  width: 100%;
+  max-width: 602px;
+  margin-bottom: 12px;
+  font-family: var(--font-serif);
+  color: var(--color-white);
+}
+
+.picture {
+  display: contents;
+}
+
+.image {
+  width: 400px;
+  height: var(--image-height, 350px);
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 32px;
+  }
+
+  .grid {
+    flex-wrap: wrap-reverse;
+  }
+
+  .column {
+    width: 100%;
+  }
+
+  .card {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+
+  .image {
+    width: 350px;
+    height: 300px;
+  }
+
+  .desktopOnly {
+    display: none;
+  }
+}

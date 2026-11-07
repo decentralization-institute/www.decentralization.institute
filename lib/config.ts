@@ -15,6 +15,3 @@ export const NODE_ENV = process.env.NODE_ENV ?? "development";
 // committed here. Override at build time with NEXT_PUBLIC_GOOGLE_ANALYTICS_KEY.
 export const GOOGLE_ANALYTICS_KEY =
   process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_KEY || "G-HSG45SWB94";
-export const PLASMIC_PROJECT_ID = process.env.PLASMIC_PROJECT_ID ?? "MISSING";
-export const PLASMIC_PROJECT_API_TOKEN =
-  process.env.PLASMIC_PROJECT_API_TOKEN ?? "MISSING";

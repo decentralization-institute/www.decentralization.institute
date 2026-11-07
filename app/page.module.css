@@ -1,0 +1,48 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 107px 12% 109px;
+  background: var(--color-sand);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  max-width: var(--content-max-width);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.logo img {
+  width: 480px;
+  height: 480px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.mission {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.mission p {
+  width: 80%;
+  font-family: var(--font-serif);
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding-top: 87px;
+  }
+}

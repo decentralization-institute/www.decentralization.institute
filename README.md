@@ -1,29 +1,32 @@
-# Next.js Static Export
+# www.decentralization.institute
 
-Next.js enables starting as a static site or Single-Page Application (SPA), then later optionally upgrading to use features that require a server.
+Website for the Decentralization Institute, built with Next.js (App Router) and
+exported as a fully static site.
 
-When running `next build`, Next.js generates an HTML file per route. By breaking a strict SPA into individual HTML files, Next.js can avoid loading unnecessary JavaScript code on the client-side, reducing the bundle size and enabling faster page loads.
-
-Learn more: https://nextjs.org/docs/app/building-your-application/deploying/static-exports
-
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-static-export)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-static-export)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+## Development
 
 ```bash
-npx create-next-app --example with-static-export with-static-export-app
+pnpm install
+pnpm dev        # http://localhost:3000
+pnpm build      # static export to ./out
+pnpm start      # build, then serve ./out
 ```
 
-```bash
-yarn create next-app --example with-static-export with-static-export-app
-```
+No environment variables or external services are needed to build. The Google
+Analytics measurement ID defaults to the one in `lib/config.ts` and can be
+overridden with `NEXT_PUBLIC_GOOGLE_ANALYTICS_KEY` (see `.env.local.example`).
 
-```bash
-pnpm create next-app --example with-static-export with-static-export-app
-```
+## Layout
+
+- `app/` – one folder per route (`page.tsx` + optional `page.module.css`),
+  the root `layout.tsx` (fonts, analytics) and `globals.css` (design tokens and
+  base typography).
+- `components/` – shared building blocks:
+  - `SiteLayout` – header, footer and the optional "Stay up to date" newsletter
+    block that wraps every page.
+  - `PageHero` – the sand-colored title card + illustration header.
+  - `GrayBand` – the light gray band used for notes and the events grid.
+  - `EventCard`, `ValueProposition` – content blocks for Events and About.
+- `public/images/` – illustrations and photos.
+
+Styles use CSS Modules. The single responsive breakpoint is `max-width: 767px`.
